@@ -25,10 +25,15 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager
 
 1. How would you describe preprocessing to someone new to CSS?
+    - Prepreocessing CSS is a type of programming that allows the generation of CSS from a preprocessor's syntax. This usually adds new features, such as nesting and mixins.
 2. What is your favorite concept in preprocessing? What is the concept that gives you the most trouble?
+    - My favorite concept in preprocessing is nesting/bubbling, because it aids in organization of the style sheet. The concept that I also have the most trouble with are mixins, I understand how to use them, I am just still wrapping my brain around when to use them.
 3. How would you explain the concept of a variable to someone new to programming?
+    - A variable is a reference to a point in memory that can hold a value. These values can be referenced in order to complete many different tasks.
 4. What is the purpose of using functions in code?
+    - It stems from object oriented programming, each block of logic should be its own nicely sized chunk.
 5. What is a JSON data?
+    - JSON stands for JavaScript Object Notation. It is a lightweight format for storing and transporting data.
 
 You may need to look up an answer but, you are expected to be able to answer all these questions. Your responses contribute to your Sprint Challenge grade. Skipping this section *will* prevent you from passing this challenge.
 
