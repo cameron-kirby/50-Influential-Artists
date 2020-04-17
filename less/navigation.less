@@ -1,0 +1,26 @@
+header {
+    margin: 4% 0;
+    display: flex;
+    justify-content: center;
+
+    nav {
+        width: 25%;
+        display: flex;
+        justify-content: space-around;
+        color: @text-dark;
+        .font(@regular);
+        font-size: 1.3rem;
+        
+        @media @mobile {
+            width: 80%;
+        }
+        a {
+            text-decoration: none;
+            color: @text-dark;
+        }
+
+        a.current-location {
+            .font(@bold);
+        }
+    }
+}
