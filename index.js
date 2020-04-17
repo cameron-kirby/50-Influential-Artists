@@ -213,7 +213,17 @@ console.log(artists[2].bio);
 
 /* Task 2: There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Use an array method to fix this issue and console.log() to check your work. */
 
-
+artists.splice(8, 1, {
+  "id": 8,
+  "name": "Vincent van Gogh",
+  "years": "1853 – 1890",
+  "genre": "Post-Impressionism",
+  "nationality": "Dutch",
+  "bio": "Vincent Willem van Gogh (Dutch: [ˈvɪnsɛnt ˈʋɪləm vɑŋ ˈɣɔx] (listen); 30 March 1853 – 29 July 1890) was a Dutch Post-Impressionist painter who is among the most famous and influential figures in the history of Western art. In just over a decade he created about 2,100 artworks, including around 860 oil paintings, most of them in the last two years of his life. They include landscapes, still lifes, portraits and self-portraits, and are characterised by bold colours and dramatic, impulsive and expressive brushwork that contributed to the foundations of modern art. However, he was not commercially successful, and his suicide at 37 followed years of mental illness and poverty.",
+  "wikipedia": "http://en.wikipedia.org/wiki/Vincent_van_Gogh",
+  "paintings": 877
+})
+console.log(artists[8].name);
 
 /* Task 3: Create a function called `getArtistByIndex` that takes two arguments:
  *     (1) artists array
@@ -223,9 +233,9 @@ console.log(artists[2].bio);
  * For example, if getArtistByIndex is invoked with the inventory and the number 0,
  * it will return `The artist at index 0 is Amedeo Modigliani`.
 */
-function getArtistByIndex(id, name) {
-    /* code here */
-  }
+function getArtistByIndex(list, id) {
+    return `The artist at index ${id} is ${list[id]}`;
+}
   
   /**
 
@@ -238,28 +248,36 @@ function getArtistByIndex(id, name) {
  * For example, if removeArtist is invoked with the data and the number 0,
  * it will remove Amedeo Modigliani from our dataset.
 */
-function removeArtist(/*code here*/) {
-    /* code here */
-  }
+function removeArtist(list, num) {
+  list.splice(num, 1); // Removes artist at index
+}
   
   /**
 
 
 /* Task 5: Create a function called get20s() that takes data as an argument and returns an array with names of artists who were born the 20th century (1800-1900) */
 
-function get20s(/* Code here */){
-
-    /* Code here */
-
+function get20s(list){
+  let specifiedArtists = [];
+  for (let i = 0; i < list.length; i++) {
+    if(list[i].years >= "1800 - 1800" && list[i].years < "1900 - 1900") {
+      specifiedArtists.push(list[i]);
+    }
   }
+  return specifiedArtists;
+}
 
 /* Task 6: Create a function called lotsOfArt() that takes artists as an argument and returns an array with names of artists who painted more than 100 paintings */
 
-function lotsOfArt(/* Code here */){
-
-    /* Code here */
-
+function lotsOfArt(list){
+  let specifiedArtists = [];
+  for (let i = 0; i < list.length; i++) {
+    if(list[i].paintings > 100) {
+      specifiedArtists.push(list[i]);
+    }
   }
+  return specifiedArtists;
+}
 
 
 /* Task 7: Create a function called `addArtist` that can accept an array of information and add it to the artists array. Then, Add a 21st artist to the array (you) with custom information! 👩‍🎨👨‍🎨
@@ -271,20 +289,26 @@ genre: Web Design,
 nationality: Your Nationality Here
 bio: Add 1-2 sentences (or use lorem ipsum) "*/
 
-function addArtist(/* Code here */){
+function addArtist(list){
+  artists.push(list);
+}
 
-    /* Code here */
-
-  }
+addArtist({id: 20, name: "Cameron", years: "2000 - Present", genre: "Web Design", nationality: "American", bio: "A web-developer based in Chicago, IL. Born and Raised in Dallas, TX"});
+console.log(artists);
 
 
 /* Task 8: Create a function called `checkArtist` that accepts a string (name of an artist) and checks if that artist is in the dataset. */
 
-function checkArtist(/* Code here */){
-
-    /* Code here */
-
+function checkArtist(list, artistName){
+  let verify = false;
+  for(let i = 0; i < list.length; i++) {
+    if(artistName === list[i].name) {
+      verify = true;
+    }
   }
+  if (verify) console.log(`${artistName} is in the list!`);
+  return verify;
+}
 
 
 
