@@ -185,6 +185,11 @@ header nav {
   font-style: normal;
   font-size: 1.3rem;
 }
+@media (max-width: 500px) {
+  header nav {
+    width: 80%;
+  }
+}
 header nav a {
   text-decoration: none;
   color: #4a4a4a;
@@ -255,6 +260,12 @@ header nav a.current-location {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media (max-width: 500px) {
+  .artists-container .artist {
+    width: 100%;
+    margin-bottom: 5%;
+  }
 }
 .artists-container .artist img {
   max-width: 80%;
